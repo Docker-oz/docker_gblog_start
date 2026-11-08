@@ -3,11 +3,11 @@ ______
 
 La pregunta no es fácil de responder. Incluso, creo que muchos de nosotros cometemos el error de dar por sentado que los conocemos. En mi caso, solía pensar que mi público objetivo era, simplemente, cualquier persona interesada en el análisis espacial o en datos con información geográfica.
 
-<p style="margin-left: 2em; margin-top: 0; margin-bottom: 0;">
-  <i>Sin embargo, (p.ej.) en una clase de SIG para licenciaturas como Ciencia de Datos, Gestión del Territorio, Marketing, Ciencias Sociales o Geología, nos encontramos con perfiles muy variados, con formas distintas de estructurar el pensamiento y proponer soluciones. Por un lado, esperamos que el geólogo domine los sistemas de referencia de coordenadas; por otro, que el científico de datos tenga un control superior sobre los algoritmos y su programación. De los perfiles de marketing y ciencias sociales, esperamos un mayor conocimiento sobre la distribución de la población, el mercado o el impacto de la concentración urbana en el espacio geográfico.
-  
-  No obstante, podemos encontrar todo lo anterior y un poco más, pero con una carencia común: estudiantes que no siempre saben que los SIG han sido introducidos en su currículo para comprender y analizar el entorno geográfico inmediato. En la mayoría de los casos, sencillamente, estos perfiles enfrentan este reto porque <b>“no saben lo que no saben”</b>.</i>
-</p>
+!!! example "Ejemplo"
+
+    _Sin embargo, (p.ej.) en una clase de SIG para licenciaturas como Ciencia de Datos, Gestión del Territorio, Marketing, Ciencias Sociales o Geología, nos encontramos con perfiles muy variados, con formas distintas de estructurar el pensamiento y proponer soluciones. Por un lado, esperamos que el geólogo domine los sistemas de referencia de coordenadas; por otro, que el científico de datos tenga un control superior sobre los algoritmos y su programación. De los perfiles de marketing y ciencias sociales, esperamos un mayor conocimiento sobre la distribución de la población, el mercado o el impacto de la concentración urbana en el espacio geográfico._
+
+    _No obstante, podemos encontrar todo lo anterior y un poco más, pero con una carencia común: estudiantes que no siempre saben que los SIG han sido introducidos en su currículo para comprender y analizar el entorno geográfico inmediato. En la mayoría de los casos, sencillamente, estos perfiles enfrentan este reto porque **“no saben lo que no saben”**._
 
 En la obra _“Teach Tech Together”_, el autor **Greg Wilson** retoma el modelo instruccional de **Benner**, que identifica cinco etapas de desarrollo cognitivo (de novato a experto) por las que la mayoría atraviesa de forma consistente cuando aprende o intenta aprender algo. También utiliza el modelo de los hermanos **Dreyfus** para clasificar a los estudiantes (de incompetente a competente). Esta distinción es vital, pues es el punto de partida para diseñar cualquier material de enseñanza que se vaya a compartir.
 
@@ -29,9 +29,9 @@ La siguiente tabla presenta las categorías de estudiantes correspondientes a lo
 ### 1.1.1 Efecto de Inversión de la Experiencia
 Wilson (2019) comenta que para entender a nuestros estudiantes no basta con ser empáticos; es necesario un proceso analítico que nos permita definir la carga cognitiva y el tipo de contenido a diseñar. 
 
-<p style="margin-left: 2em; margin-top: 0; margin-bottom: 0;">
-  <i>(p.ej.) una vez que identificas si tus alumnos son novatos o competentes conscientes (utilizando el modelo de Dreyfus), la elección entre Tutorial y Manual se vuelve crítica. Si te equivocas y entregas un tutorial paso a paso a un experto, el resultado no solo es aburrido, sino pedagógicamente dañino debido al <b>"Expertise Reversal Effect"</b>.</i>
-</p>
+!!! example "Ejemplo"
+
+    _(p.ej.) una vez que identificas si tus alumnos son novatos o competentes conscientes (utilizando el modelo de Dreyfus), la elección entre Tutorial y Manual se vuelve crítica. Si te equivocas y entregas un tutorial paso a paso a un experto, el resultado no solo es aburrido, sino pedagógicamente dañino debido al **"Expertise Reversal Effect"**._
 
 !!! quote "Wilson (2019)"
 
@@ -57,7 +57,7 @@ Patricia Benner estudió la adquisición de habilidades en enfermería no solo p
 
         _Muchos tutores, maestros, facilitadores y otros, a menudo sufren del **"punto ciego del experto"** debido a sus modelos mentales muy avanzados. Han olvidado lo que se siente no tener esas conexiones, lo que paradójicamente puede hacerlos maestros menos efectivos que un practicante competente, ya que tienden a organizar su enseñanza basándose en principios profundos y abstractos en lugar de lo que el estudiante necesita para empezar._
 
-### 1.1.2 Modelo Dreyfus
+### 1.1.3 Modelo Dreyfus
 
 Una vez que hemos hablado sobre el modelo de Benner, es momento de hablar de **Dreyfus**. Este modelo no es más que el detalle de la progresión de novato a experto de las cinco etapas identificadas por Benner, pero con la gran diferencia de tratarlas como una progresión cognitiva. Aquí se nos invita a contrastar la visión de Dreyfus con otro modelo psicológico famoso: las Cuatro Etapas de la Competencia. Entender este cruce es vital para desarrollar empatía con el aprendiz y evitar el efecto de inversión de la experiencia.
 

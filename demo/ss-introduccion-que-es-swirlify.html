@@ -1,0 +1,71 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>¿Qué es Swirlify? · G-Blog</title><meta name="description" content="G-Blog: geografía, código y enseñanza, por olivinöz.">
+<link rel="icon" href="assets/img/logo/geoz_principal_256px.png"><link rel="stylesheet" href="assets/css/demo.css"><script src="assets/theme.js"></script></head><body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="masthead"><div class="wrap">
+<button class="menu-btn" data-menu aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+<a class="brand" href="index.html" aria-label="G-Blog, inicio"><img class="logo-light" src="assets/img/logo/geoz-principal.svg" alt=""><img class="logo-dark" src="assets/img/logo/geoz-principal-oscuro.svg" alt=""></a>
+<ul class="social" aria-label="Redes sociales"><li><a class="soc" href="https://www.facebook.com/geozbook" target="_blank" rel="noopener" aria-label="Facebook (se abre en otra pestaña)"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/facebook.svg)"></i></a></li><li><a class="soc" href="https://www.youtube.com/@geoz6001" target="_blank" rel="noopener" aria-label="YouTube (se abre en otra pestaña)"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/youtube.svg)"></i></a></li><li><a class="soc" href="https://www.instagram.com/geoz.ig/" target="_blank" rel="noopener" aria-label="Instagram (se abre en otra pestaña)"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/instagram.svg)"></i></a></li><li><a class="soc" href="https://www.tiktok.com/@geoz.tk" target="_blank" rel="noopener" aria-label="TikTok (se abre en otra pestaña)"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/tiktok.svg)"></i></a></li></ul>
+<button class="theme-btn" data-toggle aria-label="Cambiar entre modo claro y oscuro">◐</button></div>
+<nav id="menu" class="drawer" aria-label="Principal" hidden><div class="wrap"><ul>
+<li><a href="presentacion.html"><strong>Presentación</strong><span>Quién escribe G-Blog</span></a></li>
+<li><a href="index.html"><strong>Inicio</strong><span>Portada y lo más reciente</span></a></li>
+<li><a href="archivo.html" aria-current="page"><strong>Archivo</strong><span>Todas las entradas y series</span></a></li>
+</ul></div></nav></header>
+<main id="main"><article>
+<header class="post-head narrow wrap"><nav class="label" aria-label="Ruta"><a href="index.html">Inicio</a> / <a href="serie-ss-courses.html">SS-Courses</a> / Introducción</nav>
+<div class="series-progress"><span class="label">Serie SS-Courses · 1 de 7</span><div class="steps"><a href="ss-introduccion-que-es-swirlify.html" class="step on" aria-label="¿Qué es Swirlify?" aria-current="step"></a><a href="ss-1-1-quienes-son-tus-aprendices.html" class="step" aria-label="1.1 · ¿Quiénes son tus aprendices?"></a><a href="ss-1-2-la-mente-del-aprendiz.html" class="step" aria-label="1.2 · La mente del aprendiz"></a><a href="ss-1-3-construir-una-maquina-nocional.html" class="step" aria-label="1.3 · Construir una máquina nocional"></a><a href="ss-2-1-tuerca-tornillo-y-archivo.html" class="step" aria-label="2.1 · Tuerca, tornillo y archivo"></a><a href="ss-2-2-carpetas-especiales-y-motor-de-swirl.html" class="step" aria-label="2.2 · Carpetas especiales y el motor de swirl"></a><a href="ss-2-3-chasis-de-un-curso.html" class="step" aria-label="2.3 · Chasis de un curso: GEOCHIP-R"></a></div></div>
+<h1>¿Qué es Swirlify?</h1>
+<p class="dek">El paquete de R para crear lecciones interactivas, para qué sirve y cómo está organizada esta serie.</p>
+<div class="byline"><span class="label">Por olivinöz</span><span class="label">21 sep 2026</span><span class="label">2 min de lectura</span><span class="label reads" data-gc="ss-intro" hidden></span><a class="tag" href="serie-ss-courses.html">Introducción</a></div></header>
+<div class="prose narrow wrap">
+<nav class="toc-inline" aria-label="En este artículo"><span class="label">En este artículo</span><ol><li><a href="#qué-es-swirlify">¿Qué es Swirlify?</a></li><li><a href="#para-qué-sirve">¿Para qué sirve?</a></li><li><a href="#cómo-funciona">¿Cómo funciona?</a></li><li><a href="#alcance">Alcance</a></li><li><a href="#estructura-de-la-guía">Estructura de la guía</a></li></ol></nav>
+<h2 id="qué-es-swirlify">¿Qué es Swirlify?</h2>
+<p><strong><em>Swirlify</em></strong> es un paquete de <strong><em>R</em></strong>, cuya única función es permitirnos crear y editar lecciones (cursos) de manera interactiva, específicamente para el paquete <code>swirl</code> (Swirl Development Team, 2025).</p>
+<h2 id="para-qué-sirve">¿Para qué sirve?</h2>
+<p>Es una herramienta para <em>instructores</em>, por así decirlo. Permite construir lecciones que tengan una forma de aprendizaje <strong>activa</strong> y no <strong>pasiva</strong>, bajo la idea de democratizar la creación de cursos de <strong><em>R</em></strong>.</p>
+<div class="admonition quote"><p class="admonition-title"><i aria-hidden="true"></i>Swirlify (Swirl Development Team)</p>
+<p><em>"Si alguien puede escribir un script de R, puede crear una lección"...</em></p>
+</div>
+<h2 id="cómo-funciona">¿Cómo funciona?</h2>
+<p>Los aprendices avanzan mediante ejercicios prácticos de <strong><em>R</em></strong> ejecutados directamente en su consola, lo que les permite responder preguntas y recibir una evaluación inmediata. De este modo, la experiencia de aprendizaje trasciende la simple recepción pasiva de contenidos.</p>
+<div class="admonition quote"><p class="admonition-title"><i aria-hidden="true"></i>Swirlify (Swirl Development Team)</p>
+<p><em>"Esto es crucial porque, a diferencia de los libros o videos, obliga al usuario a escribir código y a enfrentar sus errores en el momento"</em></p>
+</div>
+<p>Para la documentación completa <a href="https://swirlstats.com/swirlify/">swirlify Docs</a>.</p>
+<hr />
+<h2 id="alcance">Alcance</h2>
+<p>Esta guía documenta de forma sencilla cómo enseñar programación con un enfoque específico en el ecosistema de <strong><em>R</em></strong> utilizando las prácticas de instrucción activa y diferenciada expuestas en <em>“Teaching Tech Together”</em> (Greg Wilson, 2019). Estos principios se articulan en estricto apego a los estándares de calidad para el desarrollo de cursos en línea establecidos por el estándar EC0366, excluyendo la integración de otros marcos pedagógicos ajenos a esta línea formativa.</p>
+<hr />
+<h2 id="estructura-de-la-guía">Estructura de la guía</h2>
+<p>Para que transformes la teoría en lecciones vivas, esta guía está dividida en dos etapas diseñadas para complementarse paso a paso:</p>
+<ul>
+<li>
+<p><strong>Parte I</strong>: Esta sección revela el "detrás de escena" pedagógico, explorando los cimientos cognitivos y el funcionamiento de los modelos mentales en los aprendices, mostrando cómo estructurar el andamiaje ideal para que las sesiones de programación no sean abrumadoras.</p>
+</li>
+<li>
+<p><strong>Parte II</strong>: Este es el laboratorio técnico con <strong><em>Swirlify</em></strong>. Aquí exploraremos con detalle la organización de los archivos, la sintaxis adecuada y la programación de las entrañas de las lecciones para garantizar su ejecución correcta.</p>
+</li>
+</ul>
+<p>La mejor forma de dominar una herramienta es viéndola en acción. Por ello, la teoría y la técnica convergen en la creación simulada de un curso real interactivo que podrás descargar, ejecutar en tu propia consola de <strong><em>R</em></strong> y desarmar línea por línea.</p>
+<p><strong>Fuentes:</strong></p>
+<ol>
+<li>
+<p>Carpentries-ES. (s.f.). Convenciones de Traducción. GitHub. Recuperado el 26 de noviembre de 2025, de https://github.com/Carpentries-ES/board/blob/master/Convenciones_Traduccion.md</p>
+</li>
+<li>
+<p><em>Introduction</em>. (2025). Swirlstats.com. Recuperado el 6 de agosto de 2025, de https://swirlstats.com/swirlify/introduction.html</p>
+</li>
+<li>
+<p>Wilson, G. (s.f.). Enseñar tecnología juntos (Teaching Tech Together). Recuperado el 26 de noviembre de 2025, de https://teachtogether.tech/es/#</p>
+</li>
+<li>
+<p>Welcome to swirlify! (s/f). Swirlstats.com. Recuperado el 18 de agosto de 2026, de https://swirlstats.com/swirlify/</p>
+</li>
+</ol>
+</div>
+<nav class="pager wrap narrow" aria-label="Artículos de la serie"><a href="serie-ss-courses.html"><span class="label">← Serie</span><h3>SS-Courses: ruta de lectura</h3></a><a class="next" href="ss-1-1-quienes-son-tus-aprendices.html"><span class="label">Siguiente · 1.1 →</span><h3>¿Quiénes son tus aprendices?</h3></a></nav>
+</article></main><footer><div class="wrap"><span class="label footer-meta">GEOZ · 2026</span></div></footer><script data-goatcounter="https://TU-CODIGO.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>window.goatcounter = {path: "/ss-intro"};</script>
+<script data-goatcounter="https://TU-CODIGO.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body></html>

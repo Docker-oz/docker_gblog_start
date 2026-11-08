@@ -1,0 +1,140 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tuerca, tornillo y archivo · G-Blog</title><meta name="description" content="G-Blog: geografía, código y enseñanza, por olivinöz.">
+<link rel="icon" href="assets/img/logo/geoz_principal_256px.png"><link rel="stylesheet" href="assets/css/demo.css"><script src="assets/theme.js"></script></head><body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="masthead"><div class="wrap">
+<button class="menu-btn" data-menu aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+<a class="brand" href="index.html" aria-label="G-Blog, inicio"><img class="logo-light" src="assets/img/logo/geoz-principal.svg" alt=""><img class="logo-dark" src="assets/img/logo/geoz-principal-oscuro.svg" alt=""></a>
+<ul class="social" aria-label="Redes sociales"><li><a class="soc" href="https://www.facebook.com/geozbook" target="_blank" rel="noopener" aria-label="Facebook (se abre en otra pestaña)"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/facebook.svg)"></i></a></li><li><a class="soc" href="https://www.youtube.com/@geoz6001" target="_blank" rel="noopener" aria-label="YouTube (se abre en otra pestaña)"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/youtube.svg)"></i></a></li><li><a class="soc" href="https://www.instagram.com/geoz.ig/" target="_blank" rel="noopener" aria-label="Instagram (se abre en otra pestaña)"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/instagram.svg)"></i></a></li><li><a class="soc" href="https://www.tiktok.com/@geoz.tk" target="_blank" rel="noopener" aria-label="TikTok (se abre en otra pestaña)"><i style="--i:url(https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/tiktok.svg)"></i></a></li></ul>
+<button class="theme-btn" data-toggle aria-label="Cambiar entre modo claro y oscuro">◐</button></div>
+<nav id="menu" class="drawer" aria-label="Principal" hidden><div class="wrap"><ul>
+<li><a href="presentacion.html"><strong>Presentación</strong><span>Quién escribe G-Blog</span></a></li>
+<li><a href="index.html"><strong>Inicio</strong><span>Portada y lo más reciente</span></a></li>
+<li><a href="archivo.html" aria-current="page"><strong>Archivo</strong><span>Todas las entradas y series</span></a></li>
+</ul></div></nav></header>
+<main id="main"><article>
+<header class="post-head narrow wrap"><nav class="label" aria-label="Ruta"><a href="index.html">Inicio</a> / <a href="serie-ss-courses.html">SS-Courses</a> / Parte 2 · El laboratorio técnico</nav>
+<div class="series-progress"><span class="label">Serie SS-Courses · 5 de 7</span><div class="steps"><a href="ss-introduccion-que-es-swirlify.html" class="step" aria-label="¿Qué es Swirlify?"></a><a href="ss-1-1-quienes-son-tus-aprendices.html" class="step" aria-label="1.1 · ¿Quiénes son tus aprendices?"></a><a href="ss-1-2-la-mente-del-aprendiz.html" class="step" aria-label="1.2 · La mente del aprendiz"></a><a href="ss-1-3-construir-una-maquina-nocional.html" class="step" aria-label="1.3 · Construir una máquina nocional"></a><a href="ss-2-1-tuerca-tornillo-y-archivo.html" class="step on" aria-label="2.1 · Tuerca, tornillo y archivo" aria-current="step"></a><a href="ss-2-2-carpetas-especiales-y-motor-de-swirl.html" class="step" aria-label="2.2 · Carpetas especiales y el motor de swirl"></a><a href="ss-2-3-chasis-de-un-curso.html" class="step" aria-label="2.3 · Chasis de un curso: GEOCHIP-R"></a></div></div>
+<h1><span class="num">2.1</span> Tuerca, tornillo y archivo</h1>
+<p class="dek">Los archivos obligatorios de una lección de Swirlify: lesson.yaml, initLesson.R, dependson.txt y customTests.R.</p>
+<div class="byline"><span class="label">Por olivinöz</span><span class="label">19 oct 2026</span><span class="label">8 min de lectura</span><span class="label reads" data-gc="ss-2-1" hidden></span><a class="tag" href="serie-ss-courses.html">Parte 2 · El laboratorio técnico</a></div></header>
+<div class="prose narrow wrap">
+
+<p>Todo el mundo quiere saltar directamente a la sala de operaciones, sin saber siquiera qué es un bisturí. Bien, en esta sección reconoceremos primero como hay que construir los pilares que sostienen cualquier experiencia didáctica de <em>Swirlify</em>. </p>
+<div class="admonition warning"><p class="admonition-title"><i aria-hidden="true"></i>Alto</p>
+<p><em>Antes de avanzar es importante diferenciar dos conceptos, swirl y Swirlify. Por un lado <strong>swirl</strong> es el paquete de R que el aprendiz installa y su trabajo es correr en la consola, leer los archivos de la lección, presentar las preguntas, evaluar respuestas; <strong>Swirlify</strong>, como ya hemos venido diciendo, es el paquete donde los creadores e instructores redactamos los archivos lesson.yaml, initLesson.R, dependson.txt... Dicho de otra forma Swirlify crea la enfermedad (la lección) y swirl la padece (el aprendiz la toma).</em></p>
+</div>
+<p>En <strong><em>Swirlify</em></strong>, la organización de carpetas y archivos tiene que seguir un estándar estricto para garantizar que la lección sea ejecutada, correctamente validada mediante <code>test_lesson()</code> y empaquetada para llegar a los aprendices (Swirl Development Team, s.f.).             </p>
+<p>Así, un curso de <em>Swirlify</em> contiene una carpeta raíz con el nombre del curso, dentro de la cual se ubica una carpeta por cada lección, junto con archivos globales de control.  </p>
+<p>Dibujemos esto con crayolas:</p>
+<pre class="highlight"><code class="language-bash">Mi_Curso/
+├── MANIFEST                   ← Define el orden de las lecciones (OBLIGATORIO si hay &gt;2 lecciones)
+├── datos_compartidos/         ← Carpeta para datasets globales a múltiples lecciones (OPCIONAL)
+│   ├── dataset_global1.csv
+│   └── dataset_global2.rds
+└── Mi_Leccion_1/              ← Carpeta específica de la lección
+    ├── lesson.yaml            ← Contenido, preguntas y respuestas (OBLIGATORIO)
+    ├── initLesson.R           ← Código R de preparación previa (OBLIGATORIO)
+    ├── dependson.txt          ← Paquetes de R necesarios (OBLIGATORIO)
+    ├── customTests.R          ← Tests de validación personalizados (OBLIGATORIO)
+    ├── datos.csv              ← Archivos de datos específicos de la lección (OPCIONAL)
+    ├── grafico_figura.R       ← Scripts de generación de figuras (OPCIONAL)
+    └── scripts/               ← Subcarpeta para preguntas tipo 'script' (OPCIONAL)
+        ├── mi_script.R        ← Plantilla que edita el aprendiz
+        └── mi_script-correct.R← Solución correcta del script</code></pre>
+<p>A continuación, se describe el kit de herramienta, los archivos que son de relevancia para cualquier curso de <em>Swirlify</em>.</p>
+<h2 id="2-1-1-jerarquía-obligatoria">2.1.1 Jerarquía Obligatoria</h2>
+<h3 id="a-lesson-yaml">A. <code>lesson.yaml</code></h3>
+<p>Este es el corazón de la lección en  <em>Swirlify</em>. Es el archivo de metadatos y configuración donde se define la estructura de la lección, el orden de los módulos, las preguntas, las pistas (<em>hint</em>), el código que se evalúa y los mensajes que ve el usuario (tanto los aplausos vacíos cuando aciertan como los lamentos cuando fallan). Básicamente, es una serie de filas estructuradas en formato YAML que <em>R</em> traduce en la experiencia interactiva.</p>
+<ul>
+<li><strong>Requisito YAML:</strong> Sensible a la indentación; usa espacios, si usas (tabs) en lugar de espacios, o si la alineación está mal por un milímetro, todo se viene abajo.</li>
+<li><strong>El manejo de comillas y caracteres especiales</strong>: Como los textos de las preguntas y respuestas van dentro de YAML, un apóstrofe mal escapado o unas comillas mal cerradas arruinan el análisis sintáctico del archivo (<code>yaml::yaml.load_file</code> se va a quejar y con toda razón).</li>
+<li><strong>La correspondencia entre clases (Class:)</strong>: Cada bloque en el <code>lesson.yaml</code> tiene un tipo de clase (ej. <code>cmd_question</code>, <code>text, mult_question</code>). Si se declara mal a la clase, lección colapsa.</li>
+</ul>
+<pre class="highlight"><code class="language-yaml">- Class: meta
+  Course: Nombre del Curso
+  Lesson: Nombre de la Lección
+  Author: Tu Nombre Completo
+  Type: Standard
+  Organization: Tu Organización
+  Version: 2.5</code></pre>
+<div class="admonition quote"><p class="admonition-title"><i aria-hidden="true"></i>Swirlify (Swirl Development Team)</p>
+<p><em>"Una <strong>clase</strong> en Swirlify es el tipo de bloque estructural que define cómo se comportará un paso específico dentro de tu archivo lesson.yaml. Le dice al motor de swirl exactamente qué herramienta debe utilizar, qué interfaz mostrar en la consola de R (texto plano, una pregunta interactiva, la evaluación de código de R, una opción múltiple, etc.) y cómo debe evaluar la respuesta del aprendiz".</em></p>
+</div>
+<p>Existen todas estas clases, son nueve en total: <code>meta</code>, <code>text</code>, <code>multi_question</code>, <code>cmd_question</code>, <code>figure</code>, <code>video</code>, <code>exact_question</code>, <code>range_question</code>, <code>script</code>.    </p>
+<div class="admonition danger"><p class="admonition-title"><i aria-hidden="true"></i>Peligro</p>
+<p><em>Siempre, sin excepciones, sin excusas y sin berrinches, debemos insertar un bloque con la clase <strong>meta</strong> al inicio absoluto de cada archivo lesson.yaml. Si omitimos la clase, estaremos intentando operar a un paciente sin anestesia ni expediente clínico: el sistema se desploma, rechaza el archivo y te arroja un error.</em></p>
+</div>
+<h3 id="b-initlesson-r">B. <code>initLesson.R</code></h3>
+<p>Cuando <em>swirl</em> ejecuta una lección, a veces necesita preparar el terreno en la sesión de <em>R</em> del aprendiz antes de que empiece a responder preguntas: cargar conjuntos de datos específicos, definir variables personalizadas, o limpiar el entorno para que el paciente no arrastre errores de diagnósticos anteriores.  </p>
+<pre class="highlight"><code class="language-r"># Función auxiliar obligatoria para resolver la ruta del curso
+.get_course_path &lt;- function(){
+  tryCatch(swirl:::swirl_courses_dir(),
+           error = function(c) {file.path(find.package("swirl"), "Courses")}
+  )
+}
+
+# Cargar dataset de la lección
+mis_datos &lt;- read.csv(file.path(.get_course_path(), 
+                                "Mi_Curso", 
+                                "Mi_Leccion_1", 
+                                "datos.csv"))</code></pre>
+<p>Como este archivo es un script de <em>R</em> común y corriente, significa que en teoría se puede introducir cualquier código que soporte el lenguaje. Pero el hecho de que <strong>podamos hacerlo no significa que debdebamos hacerlo</strong>.</p>
+<div class="admonition example"><p class="admonition-title"><i aria-hidden="true"></i>Ejemplo</p>
+<p><em>(p.ej. )Imagina que a un colega tuyo (imprudentemente) se le ocurre la brillante idea de incluir una línea dentro de <code>initLesson.R</code> que borre todos los archivos del directorio de trabajo del usuario para "empezar limpio", o bien, que intente instalar un paquete pesado de CRAN en cada inicio de lección.</em></p>
+</div>
+<div class="admonition note"><p class="admonition-title"><i aria-hidden="true"></i>Nota</p>
+<p><em>Las recomendaciones de los manuales de enseñanza (como los de RStudio Education y Carpentries) dictan que el entorno del aprendiz debe mantenerse limpio, predecible y libre de efectos secundarios destructivos. Si nos ponemoss de creativos y rompemos el espacio de trabajo global, el sistema colapsa.</em></p>
+</div>
+<p>Estos son algunos límites y prohibiciones que debemos tener en cuenta dentro de este archivo:  </p>
+<ul>
+<li>
+<p><strong>No modificar las opciones globales de <em>R</em> de forma permanente (<code>options()</code> o <code>par()</code>)</strong>: Si cambiamos la configuración global del sistema o los gráficos de forma agresiva sin restaurarla, arruinaremos la sesión de <em>R</em> del usuario para el resto de su día. Si alteras algo temporalmente, asegúrate de limpiarlo al salir.</p>
+</li>
+<li>
+<p><strong>Evitar instalar paquetes desde internet dentro del script (<code>install.packages()</code>)</strong>: Jamás, bajo ninguna circunstancia, ejecutemos comandos de instalación automática de paquetes aquí. Si el usuario no tiene internet, si el repositorio falla o si el cortafuegos bloquea la descarga (como en muchas escuelas), la lección entera muere. Las dependencias deben estar instaladas antes de arrancar.</p>
+</li>
+<li>
+<p><strong>No ejecutar código destructivo o de modificación del disco duro del usuario</strong>: Olvidémonos de borrar archivos (<code>file.remove()</code>), modificar directorios raíz o sobreescribir datos críticos del sistema operativo del usuario. El script debe limitarse a preparar variables y cargar conjuntos de datos locales de la lección.</p>
+</li>
+<li>
+<p><strong>Tener cuidado con los tiempos de carga</strong>: Si ponemos a <em>R</em> a leer un archivo CSV de gigabytes o a entrenar un modelo de machine learning complejo cada vez que se inicia la lección, el usuario se aburrirá y cerrará la consola. Hay que mantener la carga ligera y rápida.</p>
+</li>
+</ul>
+<h3 id="c-dependson-txt">C. <code>dependson.txt</code></h3>
+<p>En <em>Swirlify</em>, este archivo de texto plano enumera las dependencias de paquetes de <em>R</em> necesarios para la lección. Es la lista de medicamentos y herramientas previas que el cirujano necesita tener en su quirófano antes de operar.  </p>
+<p><pre class="highlight"><code class="language-txt">dplyr
+ggplot2
+tidyr</code></pre>
+Su único propósito es declarar qué paquetes de CRAN, GitHub u otros repositorios deben estar instalados obligatoriamente en el entorno de <em>R</em> del aprendiz para que la lección no colapse a mitad del proceso. Si una lección requiere funciones de <code>ggplot2</code>, <code>dplyr</code> o <code>tidyr</code>, y el usuario no los tiene instalados, <em>swirl</em> se detendrá de golpe. <code>dependson.txt</code> le avisa al sistema (y al usuario) qué debe inyectar en el entorno antes de arrancar.</p>
+<p>Al igual que en <code>initLesson.R</code>, como buen cirujano, debemos de tener cuidado con lo que recetamos.  </p>
+<ul>
+<li><strong>No incluyas paquetes base de <em>R</em></strong>: Paquetes como <code>base</code>, <code>stats</code>, <code>utils</code> o <code>graphics</code> vienen preinstalados con <em>R</em>.    </li>
+<li><strong>Cuidado con las versiones o fuentes externas</strong>: Por defecto, <em>Swirlify</em> busca los paquetes en CRAN. Si pones un paquete que solo existe en una versión específica de GitHub o que ya fue retirado de los repositorios oficiales, el script de carga fallará estrepitosamente y colapsará la lección.  </li>
+<li><strong>Mantén la lista al mínimo estricto</strong>: Evitemos colocalr una lista de 50 paquetes "por si acaso". Solo hay que declara aquello que la lección vaya a utilizar de manera imperativa. Menos ruido, menos fallos.  </li>
+</ul>
+<h3 id="d-customtests-r">D. <code>customTests.R</code></h3>
+<p>Si no quieres solamente usar pruebas de validación estándar que vienen por defecto en <em>swirl</em> y quieres evaluar algo verdaderamente retorcido en el código de un aprendiz: <em>"¿quieres verificar si el aprendiz creó un gráfico con capas específicas en ggplot2?"; "¿si estructuró un objeto de datos de una forma limpía o si calculó una varianza usando una función prohibida?"</em>... para eso sirve <code>customTests.R</code>.  </p>
+<p>Este script <strong>opcional</strong> se aloja en la carpeta de la lección. Cada función que definamos aquí puede ser llamada desde el archivo <code>lesson.yaml</code> en el campo <code>AnswerTests</code> para evaluar las entradas del paciente con la precisión de un bisturí láser.</p>
+<pre class="highlight"><code class="language-r"># Definimos una prueba personalizada para verificar si el usuario creó un objeto llamado 'resultado' y si es un número positivo.
+test_resultado_positivo &lt;- function() {
+  # Recuperamos el entorno del usuario
+  e &lt;- get("e", parent.frame())
+
+  # Verificamos si la variable 'resultado' existe en su consola
+  if (!"resultado" %in% names(e$val)) {
+    return(FALSE)
+  }
+
+  # Evaluamos la condición clínica: ¿es mayor a cero?
+  is.numeric(e$val$resultado) &amp;&amp; e$val$resultado &gt; 0
+}</code></pre>
+<div class="admonition tip"><p class="admonition-title"><i aria-hidden="true"></i>Consejo</p>
+<p><em>Si creas una prueba personalizada, asegúrate de acompañarla de un buen AnswerHint en el lesson.yaml. De lo contrario, el aprendiz fallará y no tendrá la menor idea de por qué su código fue rechazado.</em></p>
+</div>
+</div>
+<nav class="pager wrap narrow" aria-label="Artículos de la serie"><a href="ss-1-3-construir-una-maquina-nocional.html"><span class="label">← Anterior · 1.3</span><h3>Construir una máquina nocional</h3></a><a class="next" href="ss-2-2-carpetas-especiales-y-motor-de-swirl.html"><span class="label">Siguiente · 2.2 →</span><h3>Carpetas especiales y el motor de swirl</h3></a></nav>
+</article></main><footer><div class="wrap"><span class="label footer-meta">GEOZ · 2026</span></div></footer><script data-goatcounter="https://TU-CODIGO.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>window.goatcounter = {path: "/ss-2-1"};</script>
+<script data-goatcounter="https://TU-CODIGO.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body></html>

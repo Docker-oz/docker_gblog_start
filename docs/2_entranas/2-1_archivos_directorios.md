@@ -82,9 +82,9 @@ mis_datos <- read.csv(file.path(.get_course_path(),
 
 Como este archivo es un script de _R_ común y corriente, significa que en teoría se puede introducir cualquier código que soporte el lenguaje. Pero el hecho de que **podamos hacerlo no significa que debdebamos hacerlo**.
 
-<p style="margin-left: 2em; margin-top: 0; margin-bottom: 0;">
-  <i>(p.ej. )Imagina que a un colega tuyo (imprudentemente) se le ocurre la brillante idea de incluir una línea dentro de <code>initLesson.R</code> que borre todos los archivos del directorio de trabajo del usuario para "empezar limpio", o bien, que intente instalar un paquete pesado de CRAN en cada inicio de lección.</i>
-</p>
+!!! example "Ejemplo"
+
+    _(p.ej. )Imagina que a un colega tuyo (imprudentemente) se le ocurre la brillante idea de incluir una línea dentro de `initLesson.R` que borre todos los archivos del directorio de trabajo del usuario para "empezar limpio", o bien, que intente instalar un paquete pesado de CRAN en cada inicio de lección._
 
 !!! Nota
 
@@ -167,9 +167,9 @@ A diferencia de `initLesson.R` (que se ejecuta de manera invisible y automática
 
 _-"¿Es obligatoria?"-_ **Absolutamente NO**. Si la lección es puramente interactiva en la consola o basada en preguntas de opción múltiple y texto, la carpeta scripts brilla por su ausencia y nadie va a morir, todo dependerá del diseño instruccional del facilitador.
 
-<p style="margin-left: 2em; margin-top: 0; margin-bottom: 0;">
-  <i>(p.ej.) Cuando queremos enseñar buenas prácticas de formato, cómo estructurar un archivo de análisis de datos complejo, o cómo funciona un flujo de trabajo con múltiples funciones que no caben en una sola línea de comando de la consola interactiva.</i>
-</p>
+!!! example "Ejemplo"
+
+    _(p.ej.) Cuando queremos enseñar buenas prácticas de formato, cómo estructurar un archivo de análisis de datos complejo, o cómo funciona un flujo de trabajo con múltiples funciones que no caben en una sola línea de comando de la consola interactiva._
 
 ### 2.1.3 Lógica de Ejecución del Motor (swirl Engine)  
 El motor de `swirl` procesa el archivo `lesson.yaml` secuencialmente como un autómata de estados. Es decir, `swirl` funciona como una máquina paso a paso: se detiene en cada bloque de `lesson.yaml`, evalúa lo que el usuario ingresa en la consola, y solo cuando se cumple la condición de validación "avanza de estado",  al siguiente bloque del archivo.  

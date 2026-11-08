@@ -26,7 +26,7 @@ Es una herramienta para _instructores_, por así decirlo. Permite construir lecc
 
 !!! Quote "Swirlify (Swirl Development Team)"
 
-    _Si alguien puede escribir un script de R, puede crear una lección..._
+    _"Si alguien puede escribir un script de R, puede crear una lección"..._
 
 ### ¿Cómo funciona?
 
@@ -34,7 +34,7 @@ Los aprendices avanzan mediante ejercicios prácticos de **_R_** ejecutados dire
 
 !!! Quote "Swirlify (Swirl Development Team)"
 
-    _Esto es crucial porque, a diferencia de los libros o videos, obliga al usuario a escribir código y a enfrentar sus errores en el momento_
+    _"Esto es crucial porque, a diferencia de los libros o videos, obliga al usuario a escribir código y a enfrentar sus errores en el momento"_
 
 Para la documentación completa [swirlify Docs](https://swirlstats.com/swirlify/).
 
@@ -42,7 +42,7 @@ Para la documentación completa [swirlify Docs](https://swirlstats.com/swirlify/
 
 ### Alcance
 
-Esta guía documenta de forma sencilla cómo enseñar programación con un enfoque específico en el ecosistema de R utilizando las prácticas de instrucción activa y diferenciada expuestas en _“Teaching Tech Together”_ (Greg Wilson, 2019). Estos principios se articulan en estricto apego a los estándares de calidad para el desarrollo de cursos en línea establecidos por el estándar EC0366, excluyendo la integración de otros marcos pedagógicos ajenos a esta línea formativa.
+Esta guía documenta de forma sencilla cómo enseñar programación con un enfoque específico en el ecosistema de **_R_** utilizando las prácticas de instrucción activa y diferenciada expuestas en _“Teaching Tech Together”_ (Greg Wilson, 2019). Estos principios se articulan en estricto apego a los estándares de calidad para el desarrollo de cursos en línea establecidos por el estándar EC0366, excluyendo la integración de otros marcos pedagógicos ajenos a esta línea formativa.
 
 ---
 

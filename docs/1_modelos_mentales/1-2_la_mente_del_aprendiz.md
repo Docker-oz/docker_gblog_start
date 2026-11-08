@@ -24,9 +24,9 @@ Por tanto, no hay que limitarnos solo a _trasmitir_ información, sino a aplicar
 
     _“La memoria de trabajo es limitada y solo puede retener aproximadamente 7 (más o menos 2) elementos a la vez. Si sobrepasamos este número saturamos la carga cognitiva del aprendiz. Investigaciones recientes indican que este número pude se más bajo como 4 (más o menos 1)”._
 
-<p style="margin-left: 2em; margin-top: 0; margin-bottom: 0;">
-  <i>(p.ej.) Sin una máquina nocional explícitamente diseñada por el facilitador, el Novato no deja su mente en blanco; la llena con basura cognitiva, no puede predecir qué hará el código ni depurarlo (debug). Solo puede adivinar y realizar cambios aleatorios esperando que funcione, lo cual refuerza malos hábitos. Finalmente, el costo más humano es la desmotivación.</i>
-</p>
+!!! example "Ejemplo"
+
+    _(p.ej.) Sin una máquina nocional explícitamente diseñada por el facilitador, el Novato no deja su mente en blanco; la llena con basura cognitiva, no puede predecir qué hará el código ni depurarlo (debug). Solo puede adivinar y realizar cambios aleatorios esperando que funcione, lo cual refuerza malos hábitos. Finalmente, el costo más humano es la desmotivación._
 
 La ausencia de sesiones de aprendizaje basadas en la gestión de la carga cognitiva, el aula (física o virtual) se vuelve un sistema de selección excluyente, no construimos el andamiaje adecuado y no estamos enseñando; estamos filtrando a las personas por sus capacidades previas en lugar de desarrollarlas.
 
@@ -39,20 +39,19 @@ La Máquina Nocional es, desde mi perspectiva como facilitador, la herramienta m
 
 A continuación, se propone un ejemplo basado en la literatura _“Teach Tech Together”_. Tiene el fin de ejemplificar una sobrecarga cognitiva producto de su mala gestión, además de la omisión de un modelo mental. Después se presentará el mismo ejemplo pero con una máquina nocional adecuada, que gestione su carga cognitiva sin llegar a la saturación de elementos, además de integrar otras estrategias que soportan el andamieaje cognitivo durante el aprendizaje:
 
-<p style="margin-left: 2em; margin-top: 0; margin-bottom: 0;">
-  <i>Imagina que alguien intenta enseñar a un grupo de Novatos cual es el estandar de datos "Geoespaciales utilizando R" (<b>simple feature</b>) y al mismo tiempo enseñar cómo se utiliza la biblioteca <b>sf</b> que gestiona esos datos presentando de golpe este fragmento de código:</i>
-</p>
+!!! example "Ejemplo"
 
-<pre style="margin-left: 2em; monospace; font-size: 0.9em; line-height: 1.5; overflow-x: auto;"><code>
-# Abrimos nuesto acrchivo .shp con los datos
-&gt; sf_data &lt;- st_read("puntos.shp")
-&gt; sf_proj &lt;- st_transform(sf_data, 4326)
-&gt; p_buffer &lt;- st_buffer(sf_proj, dist = 100)
-&gt; print(paste("Área total:", sum(st_area(p_buffer)), "m2"))</code></pre>
+    _Imagina que alguien intenta enseñar a un grupo de Novatos cual es el estandar de datos "Geoespaciales utilizando R" (**simple feature**) y al mismo tiempo enseñar cómo se utiliza la biblioteca **sf** que gestiona esos datos presentando de golpe este fragmento de código:_
 
-<p style="margin-left: 2em; margin-top: 0; margin-bottom: 0;">
-  <i>Debido al <b>expert blind spot</b> (punto ciego del experto), el instructor presenta este fragmento de código creyendo que es trivial, pero mientras el experto ve un solo trozo, el Novato que aún no tiene modelos mentales funcionales sobre datos geoespaciales procesa cada carácter de forma aislada, llenando sus 7±2 espacios de memoria de trabajo en segundos.</i>
-</p>
+    ```r
+    # Abrimos nuesto acrchivo .shp con los datos
+    > sf_data <- st_read("puntos.shp")
+    > sf_proj <- st_transform(sf_data, 4326)
+    > p_buffer <- st_buffer(sf_proj, dist = 100)
+    > print(paste("Área total:", sum(st_area(p_buffer)), "m2"))
+    ```
+
+    _Debido al **expert blind spot** (punto ciego del experto), el instructor presenta este fragmento de código creyendo que es trivial, pero mientras el experto ve un solo trozo, el Novato que aún no tiene modelos mentales funcionales sobre datos geoespaciales procesa cada carácter de forma aislada, llenando sus 7±2 espacios de memoria de trabajo en segundos._
 
 El desgloce de elementos de la carga cognitiva es el siguiente:
 
@@ -187,26 +186,20 @@ Aquí es donde entra el vocabulario técnico formal: cada una de estas clases ti
 
     En esta parte los aprendices _Novatos_ **_"no saben lo que no saben"_**, mucho menos tienen modelos mentales sobre los datos geoespaciales. Por eso, el primer paso es plantear el cimiento de la máquina nocional más adecuado para el curso o capacitación:
 
-    <div style="margin-left: 2em; margin-top: 1em; margin-bottom: 1em;">
-      <i>(p.ej.) Introducir los conceptos "Geoespaciales en R" a un grupo de aprendices Novatos, para permitirnos responder: ¿Qué son los datos geoespaciales? y ¿Cómo interviene R en su procesamiento?.</i>
-    </div>
+    !!! example "Ejemplo"
 
-    <div style="margin-left: 2em;">
+        _(p.ej.) Introducir los conceptos "Geoespaciales en R" a un grupo de aprendices Novatos, para permitirnos responder: ¿Qué son los datos geoespaciales? y ¿Cómo interviene R en su procesamiento?._
 
     !!! note "Nota"
-        </br>
-        </br>
-        _Debemos resistir la tentación de empezar con la **sintaxis del código**. Primero debemos instalar en sus mentes el objetivo de la Máquina Nocional: la elección del modelo mental más simplificado de cómo la computadora y R perciben el espacio viene después._
 
-    </div>
+        _Debemos resistir la tentación de empezar con la **sintaxis del código**. Primero debemos instalar en sus mentes el objetivo de la Máquina Nocional: la elección del modelo mental más simplificado de cómo la computadora y R perciben el espacio viene después._
 
 2. **Presentación del modelo mental**:
 
     Para un _Novato_, el nivel de abstracción más efectivo es una **_"Caricatura Funcional"_** de la realidad. No debemos enseñarles sobre bits, ni formatos de archivo complejos (como la estructura interna de un Shapefile), ni sobre cómo <i>R</i> gestiona la memoria física.
 
     !!! nota
-        </br>
-        </br>
+
         _El modelo mental propuesto es ***Google Maps*** porque es muy probable que la mayoría ya lo haya usado para buscar una dirección. Es algo muy común._
 
 3. **Gestión de la Carga Cognitiva**:
@@ -218,8 +211,7 @@ Aquí es donde entra el vocabulario técnico formal: cada una de estas clases ti
     Durante las interacciones se presentan preguntas a manera de pequeños retos, que se utilizan para evaluar si la máquina está bien construida o si se utilizó el modelo mental correcto. Esto sirve para ir afinando las siguientes sesiones mientras se avanza en las interacciones hasta concluir la capacitación.
 
     !!! nota
-        </br>
-        </br>
+
         _En esta primera sesión, no se abordan otros elementos como las funciones para la gestión interna de archivos en R u operaciones espaciales como **st_buffer(sf_proj, dist = 100)**. Por eso es importante planear el número de sesiones necesarias para ir introduciendo el nuevo conocimiento de manera escalonada._
 
 
