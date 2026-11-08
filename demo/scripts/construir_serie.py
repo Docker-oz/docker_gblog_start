@@ -126,6 +126,8 @@ def page(title, body, current="Archivo", gc=None):
         h = h.replace(f'><strong>{current}</strong>', f' aria-current="page"><strong>{current}</strong>', 1)
     foot = FOOT
     if gc:
+        # el pie de la plantilla ya trae count.js; se quita para que solo cargue el que lleva la ruta fija
+        foot = re.sub(r'<script data-goatcounter="[^"]*"[^>]*></script>\s*', "", foot)
         foot = foot.replace("</body>", f'<script>window.goatcounter = {{path: "/{gc}"}};</script>\n<script data-goatcounter="https://TU-CODIGO.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>\n</body>')
     return h + body + foot
 
