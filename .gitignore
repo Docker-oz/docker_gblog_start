@@ -26,3 +26,4 @@ Thumbs.db
 # Generador de G-Blog
 demo/.series.json
 demo/data/lecturas.json
+__pycache__/
