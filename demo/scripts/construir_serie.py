@@ -102,6 +102,15 @@ def lab(a):
 def full(a):
     return (a["num"] + " · " if a["num"] else "") + a["title"]
 
+def step_html(s, cur):
+    on = s is cur
+    cls = "step on" if on else "step"
+    extra = ' aria-current="step"' if on else ""
+    return '<a href="' + s["slug"] + '.html" class="' + cls + '" aria-label="' + full(s) + '"' + extra + '></a>'
+
+def num_html(a):
+    return f'<span class="num">{a["num"]}</span> ' if a["num"] else ""
+
 def words(h):
     return len(re.sub(r"<[^>]+>", " ", h).split())
 
@@ -140,7 +149,7 @@ for i, a in enumerate(SERIES):
     pager += (f'<a class="next" href="{nxt["slug"]}.html"><span class="label">Siguiente · {lab(nxt)} →</span><h3>{nxt["title"]}</h3></a>'
               if nxt else '<a class="next" href="serie-ss-courses.html"><span class="label">Fin de la serie →</span><h3>Volver a la ruta de lectura</h3></a>')
     pager += "</nav>"
-    progress = "".join(f'<a href="{s["slug"]}.html" class="step{" on" if s is a else ""}" aria-label="{full(s)}"{" aria-current=\"step\"" if s is a else ""}></a>' for s in SERIES)
+    progress = "".join(step_html(s_, a) for s_ in SERIES)
     a["_body"] = body
     a["_toc"], a["_pager"], a["_progress"] = toc_html, pager, progress
 
