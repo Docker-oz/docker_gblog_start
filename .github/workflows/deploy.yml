@@ -1,4 +1,4 @@
-name: Deploy SS-Courses Zensical Site to GitHub Pages
+name: Deploy G-Blog to GitHub Pages
 
 on:
   push:
@@ -24,11 +24,19 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
-      - name: Construir imagen de Docker
-        run: docker build -t zensical-builder .
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-      - name: Generar sitio estático con Zensical en Docker
-        run: docker run --rm -v ${{ github.workspace }}:/docs -w /docs --entrypoint sh zensical-builder -c "zensical build || mkdocs build || python -m mkdocs build"
+      - name: Instalar dependencias del generador
+        run: pip install -r demo/scripts/requirements.txt
+
+      # G-Blog: el sitio se arma desde demo/ (los artículos se regeneran desde docs/*.md).
+      # Para activar el contador, crea la variable de repositorio GOATCOUNTER_CODE
+      # (Settings → Secrets and variables → Actions → Variables).
+      - name: Construir G-Blog
+        run: python demo/scripts/construir_sitio.py --goatcounter "${{ vars.GOATCOUNTER_CODE }}"
 
       - name: Verificar archivos generados
         run: ls -la site
