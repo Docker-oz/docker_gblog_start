@@ -27,3 +27,8 @@ Thumbs.db
 demo/.series.json
 demo/data/lecturas.json
 __pycache__/
+
+# Material de marca local (no necesario para el despliegue)
+brand-book/
+demo/geoz_*.png
+demo/geoz_*.svg
